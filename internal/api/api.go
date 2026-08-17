@@ -168,7 +168,7 @@ func handlePortHosts(w http.ResponseWriter, req *http.Request, r *registry.Regis
 	} else {
 		portStr = rest
 	}
-	if sub != "" && sub != "hosts" {
+	if sub != "hosts" {
 		writeError(w, http.StatusNotFound, "unknown path")
 		return
 	}
